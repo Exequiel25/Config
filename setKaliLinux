@@ -1,0 +1,36 @@
+Steps post installation
+
+Install git
+sudo apt install git
+
+Edit bash aliases (to make large commands short)
+	modify ~/.bash_aliases (in case it's not working, make a source in ~/.bashrc)
+
+Install multiplexer
+sudo apt install tilix
+
+Take a look to Kali Tools metapackages
+
+Install and keep update TOR
+echo 'deb https://deb.torproject.org/torproject.org stretch main
+deb-src https://deb.torproject.org/torproject.org stretch main' > /etc/apt/sources.list.d/tor.list
+
+wget -O- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo apt-key add -
+
+sudo apt-get update
+sudo apt-get install tor deb.torproject.org-keyring
+
+Configure File Sharing with Syncthing
+apt-get update && apt-get install apt-transport-https -V
+
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+
+echo 'deb https://apt.syncthing.net/ syncthing stable' >> /etc/apt/sources.list
+
+echo 'Package: *
+Pin: origin apt.syncthing.net
+Pin-Priority: 1001' > /etc/apt/preferences.d/syncthing
+
+sudo apt-get update && apt-get install syncthing
+
+Install SSH

@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# Copyright (C) 2014 Julien Bonjean <julien@bonjean.info>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Modified by Exequiel J Magni G 2023
+
+case $BLOCK_BUTTON in
+    1) exec gnome-system-monitor ;;
+esac
+
+TYPE="${BLOCK_INSTANCE:-mem}"
+PERCENT="${PERCENT:-true}"
+
+# Get memory information
+if [ "$TYPE" = "swap" ]; then
+    info=( $(free -m | awk '/Swap:/ {print $2, $3}') )
+else
+    info=( $(free -m | awk '/Mem:/ {print $2, $3}') )
+fi
+
+total=${info[0]}
+used=${info[1]}
+free=$(($total - $used))
+pct=$(echo "scale=2; $used/$total*100" | bc)
+
+# full text
+if [ "$PERCENT" = "true" ]; then
+    printf "%.1fG/%.1fG (%.f%%)\n" $(echo "scale=2; $used/1024" | bc) $(echo "scale=2; $total/1024" | bc) $pct
+else
+    printf "%.1fG/%.1fG\n" $(echo "scale=2; $used/1024" | bc) $(echo "scale=2; $total/1024" | bc)
+fi
+
+# short text
+printf "%.f%%\n" $pct
+
+# color
+if (( $(echo "$pct > 90" | bc -l) )); then
+    echo "#FF0000"
+elif (( $(echo "$pct > 80" | bc -l) )); then
+    echo "#FFAE00"
+elif (( $(echo "$pct > 70" | bc -l) )); then
+    echo "#FFF600"
+fi

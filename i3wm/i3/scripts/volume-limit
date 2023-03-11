@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+max_percent=$1
+
+function vol() {
+    pactl list sinks \
+    | grep '^[[:space:]]Volume:'\
+    | head -n $(( $SINK + 1 )) \
+    | tail -n 1 \
+    | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'
+}
+
+if (( $(vol) < max_percent )); then
+    pactl set-sink-volume @DEFAULT_SINK@ +10%
+else
+    pactl set-sink-volume @DEFAULT_SINK@ $max_percent%
+fi
+
+pkill -RTMIN+2 i3blocks

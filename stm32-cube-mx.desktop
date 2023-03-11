@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=STM32CubeMx
+Comment=STM32 Code generator
+Exec=/home/exequiel/STM32CubeMX/STM32CubeMX
+Icon=/usr/share/icons/MyIcons/stm32-cubemx-ico.png
+Terminal=false

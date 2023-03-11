@@ -1,0 +1,95 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=16
+
+align=center
+markup=pango
+border_top=0
+border_bottom=3
+border_left=0
+border_right=0
+color=#eeeeee
+
+[pacman-updates]
+command=~/.config/i3blocks/scripts/arch-update
+markup=pango
+interval= 3600
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+LABEL= 
+signal=4
+
+[calendar]
+command=~/.config/i3blocks/scripts/calendar
+interval=1
+LABEL= 
+#DATEFMT=+%H:%M:%S
+# Si se quiere segundos, agregar %S en el script
+SHORTFMT=+%H:%M
+HEIGHT=580
+WIDTH=210
+
+[greetings]
+color=#0068FF
+command=echo "Hello, Exe!"
+interval=once
+
+[cpu_usage2]
+command=~/.config/i3blocks/scripts/cpu_usage2/cpu_usage2
+markup=pango
+interval=persist
+color=#ffaeff
+border=#ffaeff
+min_width=CPU 100.00%
+#REFRESH_TIME=1
+LABEL=CPU
+WARN_PERCENT=50
+CRIT_PERCENT=80
+#DECIMALS=2
+
+[memory]
+command=~/.config/i3blocks/scripts/memory
+label= 
+interval=10
+color=#52aeff
+border=#52aeff
+
+[brightness]
+command=~/.config/i3blocks/scripts/brightness/bin/brightness -a /sys/class/backlight/intel_backlight/actual_brightness -m /sys/class/backlight/intel_backlight/max_brightness
+interval=persist
+signal=1
+
+[volume]
+command=~/.config/i3blocks/scripts/volume
+#label=♪
+interval=5
+signal=2
+#USE_ALSA_NAME=1
+color=#ffa252
+border=#ff7752
+
+[microphone]
+command=~/.config/i3blocks/scripts/microphone
+interval=once
+signal=3
+color=#ffa252
+border=#ff7752
+
+[battery2]
+command=~/.config/i3blocks/scripts/battery2
+markup=pango
+interval=30
+
+[ip]
+command=~/.config/i3blocks/scripts/ip
+interval=once
+color=#91E78B
+border=#91E78B

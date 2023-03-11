@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+#case $BLOCK_BUTTON in
+#    1) exec nm-applet ;;
+#esac
+
+echo $(ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g')
