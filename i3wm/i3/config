@@ -201,8 +201,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Processing"] floating enable
 for_window [class="Gpsim"] floating enable
 for_window [class="STM32CubeMX"] floating enable
-for_window [class="ZoomMeeting"] floating enable
-for_window [class="Zoom"] floating enable
+for_window [class="zoom"] floating enable
 
 # Change colors for focus windows
 #                 border      background  text        indicator
