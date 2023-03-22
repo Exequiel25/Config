@@ -78,9 +78,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions)
+# plugins=(zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
+# source ~/.bashrc
 source ~/.bash_aliases
 
 # User configuration
@@ -117,17 +118,17 @@ export PATH="/home/exequiel/.local/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/exequiel/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/exequiel/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/exequiel/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/exequiel/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/home/exequiel/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/exequiel/miniconda/etc/profile.d/conda.sh" ]; then
+#        . "/home/exequiel/miniconda/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/exequiel/miniconda/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
-# exit conda
-conda deactivate
+
+#conda deactivate
