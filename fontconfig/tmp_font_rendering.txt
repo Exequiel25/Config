@@ -1,0 +1,5 @@
+sudo pacman -S ttf-bitstream-vera ttf-inconsolata ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-linux-libertine ttf-liberation          ─╯
+yay -S ttf-ms-fonts ttf-vista-fonts ttf-monaco ttf-qurancomplex-fonts
+
+# for wine see arch wiki
+# for fix-infinality https://gist.github.com/liubenyuan/d09e237e4213c40fc085e1accd11df43
