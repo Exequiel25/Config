@@ -156,6 +156,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Print exec flameshot gui
 bindsym $mod+Shift+Print exec pkill flameshot
 
+# invert window colors with picom
+# invert the active window (toggle its "TAG_INVERT" property)
+bindsym $mod+i exec --no-startup-id xprop -id $(xdotool getwindowfocus) -format TAG_INVERT 8c \
+            -set TAG_INVERT $(\
+                                xprop -id $(xdotool getwindowfocus) 8c TAG_INVERT \
+                                | sed -e 's/.*= 1.*/0/' -e 's/.*= 0.*/1/'  -e 's/.*not found.*/1/'\
+                            )
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
