@@ -62,10 +62,10 @@ interval=10
 color=#52aeff
 border=#52aeff
 
-[brightness]
-command=~/.config/i3blocks/scripts/brightness/bin/brightness -a /sys/class/backlight/intel_backlight/actual_brightness -m /sys/class/backlight/intel_backlight/max_brightness
-interval=persist
-signal=1
+# [brightness]
+# command=~/.config/i3blocks/scripts/brightness/bin/brightness -a /sys/class/backlight/intel_backlight/actual_brightness -m /sys/class/backlight/intel_backlight/max_brightness
+# iterval=persist
+# signal=1
 
 [volume]
 command=~/.config/i3blocks/scripts/volume
