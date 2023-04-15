@@ -1,0 +1,19 @@
+#!/bin/env sh
+
+# This script is used to control the brightness of the screen.
+# It uses brightnessctl to do so.
+
+# The signal is received by the script i3/config
+
+# Get the current brightness
+brightness=$(brightnessctl g)
+
+# Get the maximum brightness
+max_brightness=$(brightnessctl m)
+
+# Get brightness percentage
+brightness_percentage=$(echo "scale=2; $brightness/$max_brightness*100" | bc)
+
+# Display the brightness percentage,
+# using this symbol: 🔆 (\xF0\x9F\x94\x86)
+printf "\xF0\x9F\x94\x86 %.f%%\n" $brightness_percentage
