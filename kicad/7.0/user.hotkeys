@@ -241,8 +241,8 @@ eeschema.InteractiveEdit.mirrorV	Y
 eeschema.InteractiveEdit.pinTable	
 eeschema.InteractiveEdit.properties	E
 eeschema.InteractiveEdit.repeatDrawItem	Ins
-eeschema.InteractiveEdit.rotateCCW	R
-eeschema.InteractiveEdit.rotateCW	Shift+R
+eeschema.InteractiveEdit.rotateCCW	Shift+R
+eeschema.InteractiveEdit.rotateCW	R
 eeschema.InteractiveEdit.showDeMorganAlternate	
 eeschema.InteractiveEdit.showDeMorganStandard	
 eeschema.InteractiveEdit.slice	
