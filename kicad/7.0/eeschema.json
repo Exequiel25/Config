@@ -17,9 +17,9 @@
     "edit_sheet_height": -1,
     "edit_sheet_visible_columns": "0 1 2 3 4 5 6 7",
     "edit_sheet_width": -1,
-    "edit_symbol_height": -1,
+    "edit_symbol_height": 545,
     "edit_symbol_visible_columns": "0 1 2 3 4 5 6 7",
-    "edit_symbol_width": -1,
+    "edit_symbol_width": 1111,
     "erc_severities": 24,
     "footprint_preview": true,
     "print_sheet_reference": true,
@@ -48,22 +48,22 @@
   "bom": {
     "plugins": [
       {
-        "command": "",
+        "command": "/usr/bin/python3 \"/usr/share/kicad/plugins/bom_csv_grouped_extra.py\" \"%I\" \"%O.csv\"",
         "name": "bom_csv_grouped_extra",
         "path": "bom_csv_grouped_extra.py"
       },
       {
-        "command": "",
+        "command": "/usr/bin/python3 \"/usr/share/kicad/plugins/bom_csv_grouped_by_value.py\" \"%I\" \"%O.csv\"",
         "name": "bom_csv_grouped_by_value",
         "path": "bom_csv_grouped_by_value.py"
       },
       {
-        "command": "",
+        "command": "/usr/bin/python3 \"/usr/share/kicad/plugins/bom_csv_grouped_by_value_with_fp.py\" \"%I\" \"%O.csv\"",
         "name": "bom_csv_grouped_by_value_with_fp",
         "path": "bom_csv_grouped_by_value_with_fp.py"
       }
     ],
-    "selected_plugin": ""
+    "selected_plugin": "bom_csv_grouped_extra"
   },
   "color_picker": {
     "default_tab": 0
@@ -201,19 +201,19 @@
     "thickness": 3
   },
   "simulator": {
-    "cursors_panel_height": 0,
-    "plot_panel_height": 0,
-    "plot_panel_width": 0,
-    "signal_panel_height": 0,
+    "cursors_panel_height": 178,
+    "plot_panel_height": 500,
+    "plot_panel_width": 300,
+    "signal_panel_height": 255,
     "white_background": false,
     "window": {
       "display": 0,
       "maximized": false,
-      "perspective": "",
-      "pos_x": 0,
-      "pos_y": 0,
-      "size_x": 500,
-      "size_y": 400
+      "perspective": "layout2|",
+      "pos_x": 685,
+      "pos_y": 40,
+      "size_x": 665,
+      "size_y": 712
     }
   },
   "symbol_chooser": {
@@ -221,11 +221,13 @@
     "keep_symbol": false,
     "place_all_units": true,
     "sash_pos_h": 439,
-    "sash_pos_v": -1,
+    "sash_pos_v": 538,
     "width": 785
   },
   "system": {
-    "file_history": [],
+    "file_history": [
+      "/home/exequiel/Documents/Tutorials/KiCad/getting-started/getting-started.kicad_sch"
+    ],
     "first_run_shown": false,
     "last_imperial_units": 0,
     "last_metric_units": 1,
@@ -253,13 +255,13 @@
       "user_grid_x": "10 mil",
       "user_grid_y": "10 mil"
     },
-    "maximized": false,
+    "maximized": true,
     "mru_path": "",
-    "perspective": "",
+    "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=1204;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=44;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=SchematicHierarchy;caption=Schematic Hierarchy;state=2099148;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=252;floaty=45;floatw=200;floath=200|name=OptToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=396;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ToolsToolbar;caption=;state=139596;dir=2;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=762;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=178;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=34|dock_size(3,6,0)=44|dock_size(4,2,0)=34|dock_size(2,2,0)=34|dock_size(5,0,0)=384|dock_size(4,3,0)=202|",
     "pos_x": 0,
     "pos_y": 0,
-    "size_x": 0,
-    "size_y": 0,
+    "size_x": 1280,
+    "size_y": 720,
     "zoom_factors": [
       0.05,
       0.07,
